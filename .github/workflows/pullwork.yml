@@ -1,0 +1,12 @@
+name: Pull-workflow
+on: 
+  pull_request:
+    branches:
+      -main
+
+jobs: 
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print stmt
+      run: echo "Abishek"

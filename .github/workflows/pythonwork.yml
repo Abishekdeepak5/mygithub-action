@@ -6,7 +6,7 @@ jobs:
 
         steps:
         - name: makecheckout
-          uses: actions/chectout@4
+          uses: actions/checkout@4
         - name: setpython
           uses: actions/setup-python@v5
           with:

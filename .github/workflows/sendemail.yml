@@ -5,17 +5,32 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: Send email
+        # - name: Send email
+        #   uses: hilarion5/send-mail@v1
+        #   with:
+        #     host: smtp.google.com
+        #     port: 465
+        #     account: ${{secrets.ACCOUNT}}
+        #     password: ${{secrets.MAIL_PASSWORD}}
+        #     sender: hilarion5 
+        #     from: ${{secrets.MAIL_ADDRESS}}
+        #     to: abishekdeepakff@gmail.com
+        #     subject: mail title.
+        #     body: your messages.
+        #     contentType: text/plain
+        #     attachments: '[{"path":"README.md"}]'
+        - name: Send Email
           uses: hilarion5/send-mail@v1
           with:
-            host: smtp.google.com
-            port: 465
-            account: ${{secrets.ACCOUNT}}
-            password: ${{secrets.MAIL_PASSWORD}}
-            sender: hilarion5 
-            from: ${{secrets.MAIL_ADDRESS}}
-            to: abishekdeepakff@gmail.com
-            subject: mail title.
-            body: your messages.
-            contentType: text/plain
-            attachments: '[{"path":"README.md"}]'
+              smtp-server: smtp.example.com
+              smtp-port: 465
+              smtp-secure: true
+              from-email: abishekdeepakff@gmail.com
+              to-email: logsak25@gmail.com,abishekdeepak321@gmail.com
+              username: Deepak XI A2
+              password: ddle qxfz irmm otqq
+              subject: Test Email
+              body: This is a test email sent from GitHub Actions.
+              html: |
+                <h1>This is a test email</h1>
+                <p>Test Paragraph</p>

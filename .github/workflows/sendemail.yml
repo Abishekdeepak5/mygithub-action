@@ -6,7 +6,7 @@ jobs:
 
         steps:
         - name: Send email
-          uses: hilarion5/send-mail@v1.0.2
+          uses: hilarion5/send-mail@v1
           with:
             host: smtp.google.com
             port: 465

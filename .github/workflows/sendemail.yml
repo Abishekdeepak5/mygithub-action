@@ -6,13 +6,13 @@ jobs:
 
         steps:
         - name: Send email
-          uses: Deepak/send-mailer@v1.0.2
+          uses: hilarion5/send-mail@v1.0.2
           with:
             host: smtp.google.com
             port: 465
             account: ${{secrets.ACCOUNT}}
             password: ${{secrets.MAIL_PASSWORD}}
-            sender: Deepak 
+            sender: hilarion5 
             from: ${{secrets.MAIL_ADDRESS}}
             to: abishekdeepakff@gmail.com
             subject: mail title.
